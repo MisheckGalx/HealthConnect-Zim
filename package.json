@@ -1,0 +1,19 @@
+{
+  "name": "healthconnect-zim",
+  "version": "1.0.0",
+  "description": "Connecting Communities to Quality Healthcare Through Technology",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Misheck & Brian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.2"
+  }
+}
