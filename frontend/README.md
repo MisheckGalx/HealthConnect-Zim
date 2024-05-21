@@ -51,34 +51,4 @@ Follow these steps to set up the frontend project locally on your machine.
     npm start
     ```
 
-    This will start the development server and open the application in your default web browser. The app will be running at `http://localhost:3000`.
-
-## Directory Structure
-
-Here's an overview of the directory structure for the project:
-
-```plaintext
-healthconnect-zim-frontend/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Header.js
-│   │   ├── Footer.js
-│   │   └── ...
-│   ├── pages/
-│   │   ├── Home.js
-│   │   ├── About.js
-│   │   ├── Services.js
-│   │   ├── Contact.js
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── styles/
-│       ├── main.css
-│       └── ...
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
+    This will start the development server and open the application in your default web browser. 
