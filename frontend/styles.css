@@ -1,77 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthConnectZim</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>HealthConnectZim</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to HealthConnectZim</h2>
-            <p>Your Health, Our Priority</p>
-            <a href="#services" class="cta-button">Explore Services</a>
-        </div>
-    </section>
+body {
+    line-height: 1.6;
+}
 
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-item">
-                    <h3>Consultation</h3>
-                    <p>Get expert advice from our healthcare professionals.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Diagnostics</h3>
-                    <p>Accurate and timely diagnostic services.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Pharmacy</h3>
-                    <p>Wide range of medicines and health products.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>HealthConnectZim is dedicated to providing quality healthcare services to the community. Our team of experienced professionals is here to ensure your well-being.</p>
-        </div>
-    </section>
+header {
+    background: #50b3a2;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 HealthConnectZim. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header h1 {
+    float: left;
+    margin-top: 10px;
+}
+
+section#home {
+    background: #333;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+section#home h2 {
+    font-size: 40px;
+}
+
+section#home p {
+    font-size: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    background: #e8491d;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+section#services {
+    padding: 20px 0;
+}
+
+section#services .services {
+    display: flex;
+    justify-content: space-between;
+}
+
+section#services .service-item {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+section#about,
+section#contact {
+    padding: 20px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: inline-block;
+    background: #50b3a2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
