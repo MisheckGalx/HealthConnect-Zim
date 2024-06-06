@@ -1,0 +1,252 @@
+:root {
+  --theme-color: #35424a;
+  --theme-color-opp: #f4f4f4;
+  --theme-secondary-color: #e8491d;
+  --theme-secondary-color-opp: white;
+  --radius: 5px;
+}
+
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color: var(--theme-color-opp);
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background-color: var(--theme-secondary-color);
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:var(--theme-secondary-color-opp);
+}
+
+.dark{
+  padding:15px;
+  background: var(--theme-color);
+  color: var(--theme-color-opp);
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius: var(--radius);
+}
+
+/* Header/Toolbar **/
+header{
+  background: var(--theme-color);
+  color: var(--theme-color-opp);
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:3px solid var(--theme-secondary-color);
+}
+
+header a{
+  color: var(--theme-color-opp);
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color: var(--theme-secondary-color);
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+#main article {
+  margin-right: 5px;
+}
+
+#main .container * {
+  padding: 2px 10px;
+}
+
+/* Showcase */
+#showcase{
+  min-height:400px;
+  background: url('../images/hero.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align:center;
+  color: var(--theme-secondary-color);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+  background-color: var(--theme-secondary-color-opp);
+  border-radius: var(--radius);
+  text-shadow: none;
+}
+
+/* Download */
+#download{
+  padding:15px;
+  color: var(--theme-color-opp);
+  background-color:var(--theme-color);
+}
+
+#download input[type=button] {
+	background-color: var(--theme-secondary-color);
+	color: var(--theme-secondary-color-opp);
+	padding: 20px 10px;
+	border: none;
+	border-radius: var(--radius);
+	display: block;
+	margin: 0px auto;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+
+#testimonials h2 {
+  color: var(--theme-secondary-color);
+  text-decoration: underline;
+}
+
+#testimonial-item {
+  display: block;
+  margin: 0px auto;
+}
+
+#testimonial-item p {
+  font-style: italic;
+}
+
+#testimonial-item#img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px 50px 50px 50px;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:var(--theme-color-opp);
+  background-color: var(--theme-color);
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: var(--theme-secondary-color);
+  
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}

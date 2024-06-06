@@ -7,3 +7,5 @@ mongoengine==0.24.1
 dnspython==2.1.0
 gunicorn==20.1.0
 python-dotenv==0.19.2
+tzdata
+django

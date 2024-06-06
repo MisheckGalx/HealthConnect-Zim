@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get an online nurse, doctor or therapist consultation with your smartphone">
+    <meta name="keywords" content="healthconnect, health, medical">
+    <meta name="authors" content="Brian Musakwa, Misheck Gogo">
+    <title>HealthConnectZim | Welcome</title>
+    
+    {% block stylesheets %}
+    	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    {% endblock stylesheets %}
+    
+    <link rel="icon" href="{% static 'main/images/favicon.png' %}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>
+            <a href="{% url 'home' %}" style="text-decoration=none;text-transform:none;font-size: 1.1em"><span class="highlight">HealthConnect</span>Zim</a>
+          </h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    {% block main %}
+    <section id="showcase">
+      <div class="container">
+        <h1>General health</h1>
+        <p>Treatment for everyday and chronic conditions</p>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="container">
+        <input type="button" value="Download HealthConnectZim">
+      </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="{% static 'main/images/download.png' %}">
+          <h3>Download</h3>
+          <p>Download the HealthConnectZim app</p>
+        </div>
+        <div class="box">
+          <img src="{% static 'main/images/register.png' %}">
+          <h3>Registration</h3>
+          <p>Register with your mobile number and a valid ID</p>
+        </div>
+        <div class="box">
+          <img src="{% static 'main/images/consulting.png' %}">
+          <h3>Consultation</h3>
+          <p>Select the consultation type and start your consultation</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial-item">
+              <img id="img" src="{% static 'main/images/brian.jpg' %}"
+              <p>"HealthConnectZim provided excellent care and support. Highly recommended!"</p>
+              <h4>- Brian Musakwa</h4>
+            </div>
+        </div>
+    </section>
+    {% endblock main %}
+    
+    <footer>
+      <p>HealthConnectZim, Copyright &copy; 2024</p>
+      <ul>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-conditions">Terms & Conditions</a></li>
+      </ul>
+      
+    </footer>
+  </body>
+</html>
