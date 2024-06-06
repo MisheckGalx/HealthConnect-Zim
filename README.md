@@ -1,5 +1,8 @@
 # HealthConnectZim: Bridging Healthcare Gaps in Zimbabwe
 
+
+![ATL TEXT](https://github.com/MisheckGalx/HealthConnect-Zim/blob/MisheckG/frontend/assests/images/logo.png?raw=true)
+
 ## Tagline
 Connecting Communities to Quality Healthcare Through Technology
 
