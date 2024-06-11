@@ -9,8 +9,8 @@ PROJECT_DIR="hcz"
 # Virtual environment directory
 VENV_DIR=".venv"
 
-# Store readme content
-README_CONTENT="$(cat README.md)"
+# Install necessary dependencies
+python3 -m pip install -r ./requirements.txt
 
 # Check if the virtual environment directory exists
 if [ ! -d "$VENV_DIR" ]
@@ -40,6 +40,8 @@ echo "from django.contrib.auth import get_user_model; User = get_user_model(); U
 # Run the Django server
 python3 manage.py runserver
 
-echo "$README_CONTENT"
+# Run python code to replace link to the site in readme if it exists and, 
+# add it if it doesnt exist
+python3 ./update_readme.py
 
 deactivate
