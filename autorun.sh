@@ -9,6 +9,9 @@ PROJECT_DIR="hcz"
 # Virtual environment directory
 VENV_DIR=".venv"
 
+# Store readme content
+README_CONTENT="$(cat README.md)"
+
 # Check if the virtual environment directory exists
 if [ ! -d "$VENV_DIR" ]
 then
@@ -23,21 +26,20 @@ source $VENV_DIR/bin/activate
 cd $PROJECT_DIR
 
 # Make migrations for Django app
-python manage.py makemigrations $PROJECT_DIR
+python3 manage.py makemigrations $PROJECT_DIR
 
 # Migrate the database
-python manage.py migrate
+python3 manage.py migrate
 
 # Collect static files
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
 # Create superuser if it doesn't exist
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@healthconnectzim.co.zw', 'admin') if not User.objects.filter(username='admin').exists() else print('Superuser exists.')" | python manage.py shell
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@healthconnectzim.co.zw', 'admin') if not User.objects.filter(username='admin').exists() else print('Superuser exists.')" | python3 manage.py shell
 
 # Run the Django server
-python manage.py runserver
+python3 manage.py runserver
 
-# Open the site link in a default web browser
-open $GITHUB_SERVER_URL:8000
+echo "$README_CONTENT"
 
 deactivate
