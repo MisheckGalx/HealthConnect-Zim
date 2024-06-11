@@ -13,9 +13,16 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
+    - name: Update README
       run: |
-        python3 -m pip install --upgrade pip
+        python3 update_readme.py
+        
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add .
+        git commit -m "Update README file" && git push origin || echo "No changes to commit"
 
     - name: Run autorun script
       run: |
