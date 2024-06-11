@@ -9,9 +9,6 @@ PROJECT_DIR="hcz"
 # Virtual environment directory
 VENV_DIR=".venv"
 
-# Install necessary dependencies
-python3 -m pip install -r ./requirements.txt
-
 # Check if the virtual environment directory exists
 if [ ! -d "$VENV_DIR" ]
 then
@@ -21,6 +18,9 @@ fi
 
 # Activate virtual environment
 source $VENV_DIR/bin/activate
+
+# Install necessary dependencies
+python3 -m pip install -r ./requirements.txt
 
 # Navigate to Django project directory
 cd $PROJECT_DIR
