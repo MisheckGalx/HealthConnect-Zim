@@ -5,8 +5,8 @@ import time
 
 
 last_updated = time.strftime("%d/%m/%Y %H:%M:%S")
-ipv4 = socket.gethostbyname(socket.gethostname())
-url = 'http://%s:8000'%ipv4
+host = socket.gethostname()
+url = 'http://%s:8000'%host
 insert_line = "[Visit project site](%s)"%url
 
 
