@@ -10,7 +10,7 @@ url = 'http://%s:8000'%ipv4
 
 insert_line = "[!Visit project site](%s)"%url
 
-with open("README.md", "r") as fd:
+with open("../README.md", "r") as fd:
   lines = fd.readlines()
   # checking a line after the title
   target_line = lines[1]
@@ -22,7 +22,7 @@ with open("README.md", "r") as fd:
     lines.insert(1, insert_line)
 
   # Update the readme with new url
-  with open("README.md", "w") as f:
+  with open("../README.md", "w") as f:
     counter = 0
     new_str = ""
     for line in lines:
