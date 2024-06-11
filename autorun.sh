@@ -9,10 +9,6 @@ PROJECT_DIR="hcz"
 # Virtual environment directory
 VENV_DIR=".venv"
 
-# Install all necessary dependencies
-echo "Installing all necessary dependencies"
-python3 -m pip install -r "requirements.txt"
-
 # Check if the virtual environment directory exists
 if [ ! -d "$VENV_DIR" ]
 then
