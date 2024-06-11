@@ -42,6 +42,6 @@ python3 manage.py runserver
 
 # Run python code to replace link to the site in readme if it exists and, 
 # add it if it doesnt exist
-python3 ./update_readme.py
+python3 update_readme.py
 
 deactivate
