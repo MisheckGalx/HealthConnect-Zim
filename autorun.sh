@@ -26,7 +26,7 @@ python3 -m pip install -r ./requirements.txt
 cd $PROJECT_DIR
 
 # Make migrations for Django app
-python3 manage.py makemigrations $PROJECT_DIR
+python3 manage.py makemigrations
 
 # Migrate the database
 python3 manage.py migrate
@@ -35,13 +35,13 @@ python3 manage.py migrate
 python3 manage.py collectstatic --noinput
 
 # Create superuser if it doesn't exist
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@healthconnectzim.co.zw', 'admin') if not User.objects.filter(username='admin').exists() else print('Superuser exists.')" | python3 manage.py shell
-
-# Run the Django server
-python3 manage.py runserver
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@healthconnectzim.co.zw', 'admin') if not User.objects.filter(username='admin').exists() else print('Superuser already exists.')" | python3 manage.py shell
 
 # Run python code to replace link to the site in readme if it exists and, 
 # add it if it doesnt exist
 python3 ../update_readme.py
+
+# Run the Django server
+python3 manage.py runserver
 
 deactivate
