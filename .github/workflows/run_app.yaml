@@ -15,7 +15,8 @@ jobs:
 
     - name: Update README
       run: |
-        python3 update_readme.py
+        #python3 update_readme.py
+        echo 
         
     - name: Commit and push changes
       run: |
