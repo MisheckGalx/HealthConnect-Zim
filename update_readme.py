@@ -19,7 +19,7 @@ with open("README.md", "r") as fd:
     lines[1] = insert_line
   else:
     # line doesnt exist lets add it
-    lines.insert(1, insert_line
+    lines.insert(1, insert_line)
 
   # Update the readme with new url
   with open("README.md", "w") as f:
@@ -31,6 +31,7 @@ with open("README.md", "r") as fd:
         new_str += "\n%s"%line
       else:
         new_str += line
+    f.write(new_str)
 
 
 
