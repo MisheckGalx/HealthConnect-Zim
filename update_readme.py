@@ -5,9 +5,9 @@ import time
 
 
 last_updated = time.strftime("%d/%m/%Y %H:%M:%S")
-host = socket.gethostname()
+host = socket.gethostbyname(socket.gethostname())
 url = 'http://%s:8000'%host
-insert_line = "[Visit project site](%s)"%url
+insert_line = "[Visit project site](%s)\n\nLast updated: %s"%(url, last_updated)
 
 
 with open("../README.md", "r") as fd:
