@@ -33,6 +33,7 @@ with open("../README.md", "r") as fd:
         new_str += line
     f.write(new_str)
     print('README.md file has been updated with new site url')
+    print("Content is as follows: \n%s"%new_str)
 
 
 
