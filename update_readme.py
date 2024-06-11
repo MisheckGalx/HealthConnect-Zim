@@ -7,8 +7,8 @@ import time
 last_updated = time.strftime("%d/%m/%Y %H:%M:%S")
 ipv4 = socket.gethostbyname(socket.gethostname())
 url = 'http://%s:8000'%ipv4
+insert_line = "[Visit project site](%s)"%url
 
-insert_line = "[!Visit project site](%s)"%url
 
 with open("../README.md", "r") as fd:
   lines = fd.readlines()
@@ -21,19 +21,19 @@ with open("../README.md", "r") as fd:
     # line doesnt exist lets add it
     lines.insert(1, insert_line)
 
-  # Update the readme with new url
-  with open("../README.md", "w") as f:
-    counter = 0
-    new_str = ""
-    for line in lines:
-      if not counter:
-        # counter = 0
-        new_str += "\n%s"%line
-      else:
-        new_str += line
-    f.write(new_str)
-    print('README.md file has been updated with new site url')
-    print("Content is as follows: \n%s"%new_str)
+# Update the readme with new url
+with open("../README.md", "w") as f:
+  counter = 0
+  new_str = ""
+  for line in lines:
+    if not counter:
+      # counter = 0
+      new_str += "\n%s"%line
+    else:
+      new_str += line
+  f.write(new_str)
+  print('\nREADME.md file has been updated with new site url')
+  print("CONTENT is as follows: \n%s"%new_str)
 
 
 
